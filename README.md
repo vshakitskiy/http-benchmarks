@@ -1,6 +1,6 @@
 # http-benchmarks 
 
-This repo is for comparing [mist](https://github.com/rawhat/mist) to some other webserver libraries.
+This repo is for comparing [ewe](https://github.com/vshakitskiy/ewe) to some other webserver libraries.
 
 ## Setup
 
@@ -21,17 +21,6 @@ The frameworks tested are:
   - Cowboy (OTP 28)
   - Mist (OTP 28)
   - Go (1.24.6)
-
-Each of these sample projects has a `run.sh` file in its respective directory.
-That's what I have been executing to start up the server.  These should
-hopefully cover the "production" build for these.  Obviously please tell me
-if you think I should be running something differently!  I want these results
-to be as fair and explanatory as possible (for a relatively synthetic
-benchmark, obviously).
-
-NOTE:  I previously had flask + gunicorn in the test results, but was unable
-to get the runner script executions to pass.  I'm not really sure why that's
-happening at the moment, but for now I just omitted that case.
 
 You can view the tests in `run.sh` but the cases are:
 
@@ -80,8 +69,8 @@ Each application was tested with [h2load](https://nghttp2.org/documentation/h2lo
 |ewe|19562.13 req/s|30995.63 req/s|47461.1 req/s|56096.17 req/s|66331.93 req/s|86865.23 req/s|104207.17 req/s
 |go|17343.33 req/s|28013.37 req/s|37128.53 req/s|38905.5 req/s|35441.17 req/s|37029.2 req/s|41938.3 req/s
 
-![GET /](/results/GET%20_.png)
+![GET /](/results/get.png)
 
-![GET /user/:id](/results/GET%20_user_%20id.png)
+![GET /user/:id](/results/get_id.png)
 
-![POST /user](/results/POST%20_user.png)
+![POST /user](/results/post.png)

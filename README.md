@@ -1,4 +1,4 @@
-# http-benchmarks 
+# REDO: http-benchmarks 
 
 This repo is for comparing [ewe](https://github.com/vshakitskiy/ewe) to some other webserver libraries.
 
@@ -6,13 +6,13 @@ This repo is for comparing [ewe](https://github.com/vshakitskiy/ewe) to some oth
 
 This was run with both the client and servers on the same machine.
 
-The specs are:
+The new specs are:
 
 |Part|Spec|
 |---|---|
-|OS|   WSL Ubuntu 24.04.3 LTS (Windows 11 24H2)|
-|CPU|  i5-13500H (16 threads)|
-|RAM|  16GB|
+|OS|  Proxmox VE, Arch Linux |
+|CPU|  AMD Ryzen 7 5700G (16 threads)|
+|RAM|  32GB|
 
 The frameworks tested are:
   - Express (node 18.19.1)

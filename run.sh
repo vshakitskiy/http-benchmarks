@@ -8,7 +8,7 @@ fi
 mkdir -p "output/$1"
 
 concurrencies=(16 12 8 6 4 2 1)
-server="http://192.168.1.41:8080"
+server="http://127.0.0.1:8080"
 
 for concurrency in "${concurrencies[@]}"
 do

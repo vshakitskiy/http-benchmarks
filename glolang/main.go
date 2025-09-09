@@ -2,32 +2,27 @@ package main
 
 import (
 	"fmt"
-	"io"
 	"net/http"
-
-	"github.com/gin-gonic/gin"
+	"strings"
 )
 
 func main() {
-	gin.SetMode(gin.ReleaseMode)
-	router := gin.New()
+	mux := http.NewServeMux()
 
-	router.GET("/", func(c *gin.Context) {
-		c.Status(http.StatusOK)
+	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		w.Write([]byte{})
+	})
+	mux.HandleFunc("/user/", func(w http.ResponseWriter, r *http.Request) {
+		id := strings.TrimPrefix(r.URL.Path, "/user/")
+		w.Write([]byte(id))
+	})
+	mux.HandleFunc("/user", func(w http.ResponseWriter, r *http.Request) {
+		r.Write(w)
 	})
 
-	router.GET("/user/:id", func(c *gin.Context) {
-		id := c.Param("id")
-		c.String(http.StatusOK, id)
-	})
-
-	router.POST("/user", func(c *gin.Context) {
-		if c.Request.Body != nil {
-			io.Copy(c.Writer, c.Request.Body)
-		}
-	})
-
-	if err := router.Run(":8080"); err != nil {
-		fmt.Printf("Failed to start server: %v", err)
+	// err := http.ListenAndServeTLS(":3334", "/home/alex/gleams/mist/domain.crt", "/home/alex/gleams/mist/domain.key", mux)
+	err := http.ListenAndServe(":8080", mux)
+	if err != nil {
+		fmt.Printf("Failed to start:  %w", err)
 	}
 }

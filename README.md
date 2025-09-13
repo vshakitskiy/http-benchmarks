@@ -20,6 +20,7 @@ The frameworks tested are:
   - Bandit (OTP 28 / Elixir 1.18.4)
   - Cowboy (OTP 28)
   - Mist (OTP 28)
+  - Ewe (OTP 28)
   - Go (1.25)
 
 You can view the tests in `run.sh` but the cases are:
@@ -41,7 +42,7 @@ Each application was tested with [h2load](https://nghttp2.org/documentation/h2lo
 |bandit|18451.33 req/s|35776.73 req/s|62642.7 req/s|78221.73 req/s|85612.57 req/s|107025.13 req/s|113417.9 req/s
 |cowboy|15166.73 req/s|26977.5 req/s|52466.73 req/s|70499.67 req/s|77445.8 req/s|100939.17 req/s|121844.73 req/s
 |mist|19118.4 req/s|31264.07 req/s|59846.37 req/s|80669.93 req/s|88640.33 req/s|112679.67 req/s|120934.63 req/s
-|ewe|20415.9 req/s|34935.93 req/s|67941.63 req/s|90494.83 req/s|96863.83 req/s|122107.63 req/s|132089.97 req/s
+|ewe|20525.33 req/s|32473.97 req/s|63399.30 req/s|82851.93 req/s|92417.90 req/s|113706.60 req/s|123049.93 req/s
 |go|20136.63 req/s|43623.03 req/s|77713.4 req/s|102672.6 req/s|125250.87 req/s|170414.87 req/s|220032.57 req/s
 
 							
@@ -54,7 +55,7 @@ Each application was tested with [h2load](https://nghttp2.org/documentation/h2lo
 |bandit|17838.57 req/s|34603.83 req/s|60589.77 req/s|75532.83 req/s|83675.93 req/s|104261.1 req/s|110191.77 req/s
 |cowboy|15135.77 req/s|26452.37 req/s|51294.5 req/s|71113.37 req/s|75720.07 req/s|99768 req/s|120167.17 req/s
 |mist|18646.03 req/s|30039.97 req/s|59363.47 req/s|79538.53 req/s|87675.73 req/s|108740.07 req/s|118126.83 req/s
-|ewe|20563.13 req/s|34599.6 req/s|65303.43 req/s|88377.73 req/s|94079.57 req/s|119310.53 req/s|127840.1 req/s
+|ewe|19254.07 req/s|31013.73 req/s|60104.53 req/s|79636.03 req/s|87611.47 req/s|109800.77 req/s|119102.77 req/s
 |go|19430.5 req/s|43080.43 req/s|75616.13 req/s|99338.6 req/s|121077.8 req/s|164438.77 req/s|210094.2 req/s
 							
 #### `POST /user`
@@ -65,8 +66,8 @@ Each application was tested with [h2load](https://nghttp2.org/documentation/h2lo
 |express-cluster|19995.37 req/s|39695.33 req/s|69727.73 req/s|81066.57 req/s|99230.27 req/s|123195.87 req/s|152481.27 req/s
 |bandit|14569.93 req/s|28827.9 req/s|47527.17 req/s|60675.73 req/s|68327.67 req/s|85675.13 req/s|89894.93 req/s
 |cowboy|15738.73 req/s|21853.47 req/s|41168.27 req/s|55406.7 req/s|62861.23 req/s|82749.07 req/s|99594.2 req/s
-|mist|16665.27 req/s|31531.37 req/s|53419.8 req/s|71256.9 req/s|79508.8 req/s|96559.5 req/s|105499.8 req/s
-|ewe|17103.53 req/s|28413.4 req/s|56640.4 req/s|74901.13 req/s|82842.77 req/s|103570.33 req/s|110488.5 req/s
+|mist|16250.27 req/s|30757.47 req/s|54885.67 req/s|69790.53 req/s|77654.83 req/s|96966.47 req/s|104407.83 req/s
+|ewe|16521.53 req/s|25220.5 req/s|51485.2 req/s|67137.47 req/s|76656.7 req/s|95753.87 req/s|103821.57 req/s
 |go|15648.87 req/s|31212.33 req/s|54389.67 req/s|67822.47 req/s|65711.9 req/s|63555.73 req/s|72705.97 req/s
 
 ![GET /](/results/get.png)
